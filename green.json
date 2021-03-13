@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "name": "Cucumbers",
+      "selected": false
+    },
+    {
+      "id": 2,
+      "name": "Spinach",
+      "selected": false
+    },
+    {
+      "id": 3,
+      "name": "Tomatoes",
+      "selected": false
+    },
+    {
+      "id": 4,
+      "name": "Green Beans",
+      "selected": false
+    },
+    {
+      "id": 5,
+      "name": "Spaghetti Squash",
+      "selected": false
+    }
+  ]
+  

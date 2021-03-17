@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-import leanData from "../lean.json";
+import leanData from "../green.json";
 import greenData from "../lean.json";
 
 
@@ -16,31 +16,33 @@ export default function TabOneScreen() {
 
 const [ leanList, setLeanList ] = useState(leanData);
 const [ greenList, setGreenList ] = useState(greenData);
-const [ selected, setSelected ] = useState();
-const [ greens, setGreens ] = useState("");
+const [ selected, setSelected ] = useState("hello");
 
 
-const handleOnChange = (name: React.SetStateAction<any>) =>{
+let result:String ="";
+const handleOnChange = (name: React.SetStateAction<string>) =>{
   setSelected(name);
 }  
-const handleOnGreens = (name: React.SetStateAction<any>) =>{
-  setGreens(name);
-}  
+
 
   return (
     
     <View style={styles.container}>
-      <ModalDropdown selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList}/>
-      <ModalDropdown greens={greens} handleOnGreens={handleOnGreens} style={styles.bottomDrop} options={greenList}/>
-      <Text style={styles.title}>Tab One</Text>
-      {/*<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <ModalDropdown selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[0].lean}/>
+      <ModalDropdown selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[1].green}/>
+      <Text style={styles.myText} >{selected}</Text>
+      {/*<Text style={styles.title}>Tab One</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />*/}
-      
+      <Text>{result}</Text>
   </View>
   );
 }
 
 const styles = StyleSheet.create({
+  myText:{
+    fontSize: 40
+  },
 divStyle:{
   backgroundColor:"blue"
 },

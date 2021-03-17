@@ -9,14 +9,14 @@ import { Text, View } from './Themed';
 export default function ModalDropdownFunction({options, handleOnChange, selected}) {
   
 const handleChange = (e) => {
- 
+ console.log(options[e].name);
   handleOnChange(options[e].name);
 }
 
   return (
     <View>
 <ModalDropdown  onSelect={handleChange} options={options.map(options => options.name)}  style={styles.selectBox} dropdownStyle={styles.dropdown} textStyle={styles.selectBoxText} dropdownTextStyle={styles.dropdownText} />
-    <Text style={styles.myText} >{selected}</Text>
+    
     </View>
   );
 }
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     alignSelf: "center",
 
-    borderRadius: 20,
+    
     
     alignItems: 'center',
     

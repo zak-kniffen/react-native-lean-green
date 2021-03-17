@@ -1,27 +1,27 @@
 [
     {
       "id": 1,
-      "name": "Hamburger",
+      "name": "  Hamburger  ",
       "selected": false
     },
     {
       "id": 2,
-      "name": "Turkey",
+      "name": "   Turkey   ",
       "selected": false
     },
     {
       "id": 3,
-      "name": "Chicken",
+      "name": "---Chicken---",
       "selected": false
     },
     {
       "id": 4,
-      "name": "Sausage",
+      "name": "   Sausage   ",
       "selected": false
     },
     {
       "id": 5,
-      "name": "Roast Beef",
+      "name": " Roast Beef ",
       "selected": false
     }
   ]

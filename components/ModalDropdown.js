@@ -11,6 +11,7 @@ export default function ModalDropdownFunction({options, handleOnChange, selected
 const handleChange = (e) => {
  console.log(options[e].name);
   handleOnChange(options[e].name);
+  
 }
 
   return (

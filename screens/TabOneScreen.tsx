@@ -2,35 +2,55 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import leanData from "../green.json";
 import greenData from "../lean.json";
+import { FlatList, RefreshControl } from "react-native";
+
+
 
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import ModalDropdown from '../components/ModalDropdown';
+import MyList from '../components/MyList';
+import SelectedComponent from '../components/SelectedComponent';
 import { Text, View } from '../components/Themed';
 
 import { useState } from 'react';
 import { loadOptions } from '@babel/core';
 
-
+const flatList = FlatList;
 export default function TabOneScreen() {
 
 const [ leanList, setLeanList ] = useState(leanData);
 const [ greenList, setGreenList ] = useState(greenData);
-const [ selected, setSelected ] = useState("hello");
+const [ selected, setSelected ] = useState([] as any);
 
 
 let result:String ="";
 const handleOnChange = (name: React.SetStateAction<string>) =>{
-  setSelected(name);
+  if (selected.indexOf(name) == -1){
+  let copy = [...selected];
+  copy = [...copy, name];
+  setSelected(copy);
+  }
 }  
 
+/*const addTask = (userInput ) => {
+  let copy = [...toDoList];
+  copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+  setToDoList(copy);
+}*/
 
   return (
     
     <View style={styles.container}>
-      <ModalDropdown selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[0].lean}/>
-      <ModalDropdown selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[1].green}/>
-      <Text style={styles.myText} >{selected}</Text>
+      <Text style={styles.myHeading}>Select A Lean</Text>
+      <ModalDropdown defaultValue={"Add a Lean"} selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[0].lean}/>
+      <Text style={styles.myHeading}>Select A Green</Text>
+      <ModalDropdown defaultValue={"Add a Green"} selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[1].green}/>
+      <View style={styles.divStyle}>
+        <Text style={styles.myHeading}>Meal Choices </Text>
+        <MyList selected={selected}></MyList>
+      </View>
+      
       {/*<Text style={styles.title}>Tab One</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />*/}
@@ -40,8 +60,18 @@ const handleOnChange = (name: React.SetStateAction<string>) =>{
 }
 
 const styles = StyleSheet.create({
+
   myText:{
-    fontSize: 40
+    fontSize: 20,
+    
+    backgroundColor: "blue",
+    marginHorizontal: 0,
+    paddingHorizontal: 0
+  },
+  myHeading:{
+    fontSize: 40,
+    textDecorationLine: "underline",
+    backgroundColor: "blue"
   },
 divStyle:{
   backgroundColor:"blue"
@@ -72,4 +102,9 @@ divStyle:{
     height: 1,
     width: '80%',
   },
+  myList:{
+    display:"flex",
+    flexDirection: "column",
+    height: "20%"
+  }
 });

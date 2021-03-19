@@ -32,6 +32,12 @@ const handleOnChange = (name: React.SetStateAction<string>) =>{
   setSelected(copy);
   }
 }  
+const handleFilter = (e: string) => {
+  let filtered = selected.filter((item: string) => {
+    return (item != e);
+  });
+  setSelected(filtered);
+}
 
 /*const addTask = (userInput ) => {
   let copy = [...toDoList];
@@ -48,7 +54,7 @@ const handleOnChange = (name: React.SetStateAction<string>) =>{
       <ModalDropdown defaultValue={"Add a Green"} selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[1].green}/>
       <View style={styles.divStyle}>
         <Text style={styles.myHeading}>Meal Choices </Text>
-        <MyList selected={selected}></MyList>
+        <MyList selected={selected} handleFilter={handleFilter}></MyList>
       </View>
       
       {/*<Text style={styles.title}>Tab One</Text>
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
     backgroundColor: "blue"
   },
 divStyle:{
-  backgroundColor:"blue"
+  backgroundColor:"red"
 },
  topDrop:{
   top: "20%",

@@ -8,23 +8,21 @@ import { Text, View } from './Themed';
 import {FlatList } from 'react-native';
 import {SelectedComponent} from './SelectedComponent';
 
-export default function MyList ({selected}) {
 
-    /*const handleClick = (e) => {
-        e.preventDefault()
-        handleToggle(e.currentTarget.id)
-    }*/
+export default function MyList ({selected, handleFilter}) {
+
+    const handlePress = (e) => {
+        /*console.log(e);*/
+        handleFilter(e);
+    }
 
     return (
         <FlatList style={styles.myList}
         data={selected}
         renderItem={({ item }) => (
-          <Text>{item}<Button
-          
-          title="Learn More"
-          
-          
-        /></Text>
+            
+                <Text> {item}<Button style={styles.buttonStyle} value={item} title="X" onPress={() => handlePress(item)}/></Text>
+            
         )}
         
         
@@ -33,13 +31,18 @@ export default function MyList ({selected}) {
 };
 
 const styles = StyleSheet.create({
+    buttonStyle:{
+        color: "black",
+        fontSize: 75,
+        alignSelf: 'flex-end'
+    },
     myList:{
         fontSize: 50,
-        alignSelf: "center",
+        flexShrink: 0,
         height: 20,
         backgroundColor:'green',
-        width: "100%",
-        maxHeight: "50%"
+        width: 200,
+        maxHeight: "55%"
         
     }
     });

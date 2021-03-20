@@ -28,29 +28,29 @@
 },
 {"green": [
   {
-    "id": 1,
+    "id": 6,
     "name": "Cucumbers",
-    "selected": false
+    "color": "green"
   },
   {
-    "id": 2,
+    "id": 7,
     "name": "Spinach",
-    "selected": false
+    "color": "green"
   },
   {
-    "id": 3,
+    "id": 8,
     "name": "Tomatoes",
-    "selected": false
+    "color": "yellow"
   },
   {
-    "id": 4,
+    "id": 9,
     "name": "Green Beans",
-    "selected": false
+    "color": "green"
   },
   {
-    "id": 5,
+    "id": 10,
     "name": "Spaghetti Squash",
-    "selected": false
+    "color": "red"
   }
 ]}]
   

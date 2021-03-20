@@ -25,7 +25,7 @@ const [ selected, setSelected ] = useState([] as any);
 
 
 let result:String ="";
-const handleOnChange = (name: React.SetStateAction<string>) =>{
+const handleOnChange = (name: React.SetStateAction<Object>) =>{
   if (selected.indexOf(name) == -1){
   let copy = [...selected];
   copy = [...copy, name];

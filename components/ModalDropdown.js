@@ -9,8 +9,8 @@ import { Text, View } from './Themed';
 export default function ModalDropdownFunction({options, handleOnChange, selected}) {
   
 const handleChange = (e) => {
- /*console.log(options[e].name);*/
-  handleOnChange(options[e].name);
+ /*console.log(options[e]);*/
+  handleOnChange(options[e]);
   
 }
 

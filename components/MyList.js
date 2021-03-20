@@ -12,7 +12,7 @@ import {SelectedComponent} from './SelectedComponent';
 export default function MyList ({selected, handleFilter}) {
 
     const handlePress = (e) => {
-        /*console.log(e);*/
+        console.log(e);
         handleFilter(e);
     }
 
@@ -21,7 +21,7 @@ export default function MyList ({selected, handleFilter}) {
         data={selected}
         renderItem={({ item }) => (
             
-                <Text> {item}<Button style={styles.buttonStyle} value={item} title="X" onPress={() => handlePress(item)}/></Text>
+                <Text style={{backgroundColor: item.color}}> {item.name}<Button style={styles.buttonStyle} value={item} title="X" onPress={() => handlePress(item)}/></Text>
             
         )}
         
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         flexShrink: 0,
         height: 20,
-        backgroundColor:'green',
+        backgroundColor:'gray',
         width: 200,
         maxHeight: "55%"
         

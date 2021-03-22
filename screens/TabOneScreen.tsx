@@ -53,9 +53,16 @@ const handleFilter = (e: string) => {
       <Text style={styles.myHeading}>Select A Green</Text>
       <ModalDropdown defaultValue={"Add a Green"} selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[1].green}/>
       <View style={styles.divStyle}>
-        <Text style={styles.myHeading}>Meal Choices </Text>
-        <MyList selected={selected} handleFilter={handleFilter}></MyList>
+        <View style={styles.myLeanGreens}> 
+          <Text style={styles.myHeading}>My Leans</Text>
+          <MyList selected={selected} handleFilter={handleFilter}></MyList>
+        </View>
+        <View style={styles.myLeanGreens}>
+          <Text style={styles.myHeading}>My Greens</Text>
+          <MyList selected={selected} handleFilter={handleFilter}></MyList>
+        </View>
       </View>
+      
       
       {/*<Text style={styles.title}>Tab One</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -66,7 +73,11 @@ const handleFilter = (e: string) => {
 }
 
 const styles = StyleSheet.create({
-
+  myLeanGreens:{
+    marginHorizontal: 20,
+    width: "40%",
+    backgroundColor: "blue"
+  },
   myText:{
     fontSize: 20,
     
@@ -75,12 +86,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0
   },
   myHeading:{
-    fontSize: 40,
+    fontSize: 30,
     textDecorationLine: "underline",
-    backgroundColor: "blue"
+    backgroundColor: "blue",
+    alignSelf: "center"
   },
 divStyle:{
-  backgroundColor:"red"
+  backgroundColor:"blue",
+  flexDirection: "row",
+  justifyContent: "space-between"
 },
  topDrop:{
   top: "20%",

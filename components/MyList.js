@@ -39,10 +39,10 @@ const styles = StyleSheet.create({
     myList:{
         fontSize: 50,
         flexShrink: 0,
-        height: 20,
+        height: 180,
         backgroundColor:'gray',
-        width: 200,
-        maxHeight: "55%"
+        width: "100%",
+        maxHeight: "100%"
         
     }
     });

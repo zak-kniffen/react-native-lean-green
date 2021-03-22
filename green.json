@@ -2,27 +2,32 @@
   {
     "id": 1,
     "name": "  Hamburger  ",
-    "selected": false
+    "color": "blue",
+    "leanGreen": "lean"
   },
   {
     "id": 2,
     "name": "   Turkey   ",
-    "selected": false
+    "color": "purple",
+    "leanGreen": "lean"
   },
   {
     "id": 3,
     "name": "---Chicken---",
-    "selected": false
+    "color": "cyan",
+    "leanGreen": "lean"
   },
   {
     "id": 4,
     "name": "   Sausage   ",
-    "selected": false
+    "color": "blue",
+    "leanGreen": "lean"
   },
   {
     "id": 5,
     "name": " Roast Beef ",
-    "selected": false
+    "color": "purple",
+    "leanGreen": "lean"
   }]
 
 },
@@ -30,27 +35,32 @@
   {
     "id": 6,
     "name": "Cucumbers",
-    "color": "green"
+    "color": "green",
+    "leanGreen": "green"
   },
   {
     "id": 7,
     "name": "Spinach",
-    "color": "green"
+    "color": "green",
+    "leanGreen": "green"
   },
   {
     "id": 8,
     "name": "Tomatoes",
-    "color": "yellow"
+    "color": "yellow",
+    "leanGreen": "green"
   },
   {
     "id": 9,
     "name": "Green Beans",
-    "color": "green"
+    "color": "green",
+    "leanGreen": "green"
   },
   {
     "id": 10,
     "name": "Spaghetti Squash",
-    "color": "red"
+    "color": "red",
+    "leanGreen": "green"
   }
 ]}]
   

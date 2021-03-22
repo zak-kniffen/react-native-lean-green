@@ -22,21 +22,39 @@ export default function TabOneScreen() {
 const [ leanList, setLeanList ] = useState(leanData);
 const [ greenList, setGreenList ] = useState(greenData);
 const [ selected, setSelected ] = useState([] as any);
+const [ myGreens, setMyGreens ] = useState([] as any);
 
 
 let result:String ="";
-const handleOnChange = (name: React.SetStateAction<Object>) =>{
-  if (selected.indexOf(name) == -1){
+const handleOnChange = (name: React.SetStateAction<any>) =>{ 
+  /*console.log(name.leanGreen);*/
+  if ((selected.indexOf(name) == -1) && name.leanGreen == "lean"){
   let copy = [...selected];
   copy = [...copy, name];
   setSelected(copy);
   }
+  if ((myGreens.indexOf(name) == -1) && name.leanGreen == "green"){
+    let copyGreens = [...myGreens];
+    copyGreens = [...copyGreens, name];
+    setMyGreens(copyGreens);
+  }
 }  
-const handleFilter = (e: string) => {
-  let filtered = selected.filter((item: string) => {
+const handleFilter = (e: any) => {
+  console.log(e.leanGreen + " what is this?");
+  if(e.leanGreen == "lean"){
+  let filteredLean = selected.filter((item: string) => {
     return (item != e);
   });
-  setSelected(filtered);
+  setSelected(filteredLean);
+  }
+  if(e.leanGreen == "green"){
+    let filteredGreen = myGreens.filter((item: string) => {
+      return (item != e);
+    });
+    setMyGreens(filteredGreen);
+    }
+
+  
 }
 
 /*const addTask = (userInput ) => {
@@ -59,7 +77,7 @@ const handleFilter = (e: string) => {
         </View>
         <View style={styles.myLeanGreens}>
           <Text style={styles.myHeading}>My Greens</Text>
-          <MyList selected={selected} handleFilter={handleFilter}></MyList>
+          <MyList selected={myGreens} handleFilter={handleFilter}></MyList>
         </View>
       </View>
       

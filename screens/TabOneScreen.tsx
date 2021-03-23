@@ -93,8 +93,9 @@ const handleFilter = (e: any) => {
 const styles = StyleSheet.create({
   myLeanGreens:{
     marginHorizontal: 20,
-    width: "40%",
-    backgroundColor: "blue"
+    width: "100%",
+    backgroundColor: "blue",
+    alignSelf: "center"
   },
   myText:{
     fontSize: 20,
@@ -110,9 +111,11 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
 divStyle:{
-  backgroundColor:"blue",
-  flexDirection: "row",
-  justifyContent: "space-between"
+  backgroundColor:"cyan",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  alignContent: "center",
+  width: "90%"
 },
  topDrop:{
   top: "20%",

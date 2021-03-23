@@ -1,6 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { Button,StyleSheet, TouchableOpacity } from 'react-native';
+import { Button,StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
@@ -15,13 +15,13 @@ export default function MyList ({selected, handleFilter}) {
         console.log(e);
         handleFilter(e);
     }
-
+    
     return (
         <FlatList style={styles.myList}
         data={selected}
         renderItem={({ item }) => (
             
-                <Text style={{backgroundColor: item.color}}> {item.name}<Button style={styles.buttonStyle} value={item} title="X" onPress={() => handlePress(item)}/></Text>
+                <Pressable onLongPress={() => handlePress(item)}><Text style={{backgroundColor: item.color, color:"black", fontSize: "25", fontWeight: "bold"}}> {item.name}<Button style={styles.buttonStyle} value={item} title="Cups" /></Text></Pressable>
             
         )}
         
@@ -32,14 +32,15 @@ export default function MyList ({selected, handleFilter}) {
 
 const styles = StyleSheet.create({
     buttonStyle:{
-        color: "black",
+        textDecorationColor: "black",
         fontSize: 75,
-        alignSelf: 'flex-end'
+        right: 0,
+        color: "black"
     },
     myList:{
-        fontSize: 50,
+        fontSize: 75,
         flexShrink: 0,
-        height: 180,
+        height: 90,
         backgroundColor:'gray',
         width: "100%",
         maxHeight: "100%"

@@ -7,6 +7,7 @@ import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 import {FlatList } from 'react-native';
 import {SelectedComponent} from './SelectedComponent';
+import {MeasureButton} from './MeasureButton';
 
 
 export default function MyList ({selected, handleFilter}) {
@@ -21,7 +22,7 @@ export default function MyList ({selected, handleFilter}) {
         data={selected}
         renderItem={({ item }) => (
             
-                <Pressable onLongPress={() => handlePress(item)}><Text style={{backgroundColor: item.color, color:"black", fontSize: "25", fontWeight: "bold"}}> {item.name}<Button style={styles.buttonStyle} value={item} title="Cups" /></Text></Pressable>
+                <Pressable style={styles.pressableStyle} onLongPress={() => handlePress(item)}><Text style={{backgroundColor: item.color, color:"black", fontSize: "25", fontWeight: "bold"}}> {item.name}</Text><MeasureButton/></Pressable>
             
         )}
         
@@ -31,6 +32,11 @@ export default function MyList ({selected, handleFilter}) {
 };
 
 const styles = StyleSheet.create({
+    
+    pressableStyle:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
     buttonStyle:{
         textDecorationColor: "black",
         fontSize: 75,

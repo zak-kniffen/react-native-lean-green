@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     
     pressableStyle:{
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-between'
     },
     buttonStyle:{
         textDecorationColor: "black",
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         height: 90,
         backgroundColor:'gray',
         width: "100%",
-        maxHeight: "100%"
+        maxHeight: "100%",
         
     }
     });

@@ -115,7 +115,7 @@ divStyle:{
   flexDirection: "column",
   justifyContent: "space-between",
   alignContent: "center",
-  width: "90%"
+  width: "95%"
 },
  topDrop:{
   top: "20%",

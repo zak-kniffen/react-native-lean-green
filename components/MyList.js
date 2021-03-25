@@ -8,9 +8,12 @@ import { Text, View } from './Themed';
 import {FlatList } from 'react-native';
 import {SelectedComponent} from './SelectedComponent';
 import {MeasureButton} from './MeasureButton';
+import { useEffect} from 'react';
 
 
-export default function MyList ({selected, handleFilter}) {
+export default function MyList ({selected, handleFilter, handleTotalSum, totalSum}) {
+
+
 
     const handlePress = (e) => {
         console.log(e);
@@ -31,7 +34,7 @@ export default function MyList ({selected, handleFilter}) {
                                 borderWidth: 2,
                                 width: 150}}>
                          {item.shortName}
-                    </Text><MeasureButton item={item}/></Pressable>
+                    </Text><MeasureButton item={item} handleTotalSum={handleTotalSum} totalSum={totalSum}/></Pressable>
             
         )}
         

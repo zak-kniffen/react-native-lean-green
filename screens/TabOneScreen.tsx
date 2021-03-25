@@ -23,9 +23,21 @@ const [ leanList, setLeanList ] = useState(leanData);
 const [ greenList, setGreenList ] = useState(greenData);
 const [ selected, setSelected ] = useState([] as any);
 const [ myGreens, setMyGreens ] = useState([] as any);
+const [totalSumLeans, setTotalSumLeans ] = useState(0);
+const [totalSumGreens, setTotalSumGreens ] = useState(0);
 
 
 let result:String ="";
+const handleTotalSumLeans = (name: React.SetStateAction<any>) =>{
+  let copy = totalSumLeans;
+  copy += name;
+  setTotalSumLeans(copy);
+}
+const handleTotalSumGreens = (name: React.SetStateAction<any>) =>{
+  let copy = totalSumGreens;
+  copy += name;
+  setTotalSumGreens(copy);
+}
 const handleOnChange = (name: React.SetStateAction<any>) =>{ 
   /*console.log(name.leanGreen);*/
   if ((selected.indexOf(name) == -1) && name.leanGreen == "lean"){
@@ -72,12 +84,12 @@ const handleFilter = (e: any) => {
       <ModalDropdown defaultValue={"Add a Green"} selected={selected} handleOnChange={handleOnChange} style={styles.topDrop} options={leanList[1].green}/>
       <View style={styles.divStyle}>
         <View style={styles.myLeanGreens}> 
-          <Text style={styles.myHeading}>My Leans</Text>
-          <MyList selected={selected} handleFilter={handleFilter}></MyList>
+          <Text style={styles.myHeading}>My Leans: {totalSumLeans}</Text>
+          <MyList selected={selected} handleFilter={handleFilter} handleTotalSum={handleTotalSumLeans} totalSum={totalSumLeans}></MyList>
         </View>
         <View style={styles.myLeanGreens}>
-          <Text style={styles.myHeading}>My Greens</Text>
-          <MyList selected={myGreens} handleFilter={handleFilter}></MyList>
+          <Text style={styles.myHeading}>My Greens {totalSumGreens}</Text>
+          <MyList selected={myGreens} handleFilter={handleFilter} handleTotalSum={handleTotalSumGreens} totalSum={totalSumGreens}></MyList>
         </View>
       </View>
       

@@ -5,15 +5,17 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export function MeasureButton ({item}) {
+export function MeasureButton ({item, handleTotalSum, totalSum}) {
 
     const [ measurement, setMeasurement ] = useState(item.defaultMeasurement);
-    const [ myNumber, setMyNumber ] = useState(1);
+    const [ myNumber, setMyNumber ] = useState(0);
     const [ myDisplayNumber, setMyDisplayNumber ] = useState(0);
 
-    
+    useEffect(() => {
+        console.log("child updated");
+      });
 
     /*const handleClick = (e) => {
         e.preventDefault()
@@ -42,6 +44,7 @@ export function MeasureButton ({item}) {
         if(myNumber < 3){
             let tempNumber = myNumber;
             tempNumber ++;
+            handleTotalSum(1);
             setMyNumber(tempNumber);
             if (measurement == "c"){
                 setMyDisplayNumber(tempNumber * item.cupUnit)
@@ -58,6 +61,7 @@ export function MeasureButton ({item}) {
         if(myNumber > 0){
             let tempNumber = myNumber;
             tempNumber --;
+            handleTotalSum(-1);
             setMyNumber(tempNumber);
             if (measurement == "c"){
                 setMyDisplayNumber(tempNumber * item.cupUnit)

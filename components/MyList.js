@@ -22,7 +22,16 @@ export default function MyList ({selected, handleFilter}) {
         data={selected}
         renderItem={({ item }) => (
             
-                <Pressable style={styles.pressableStyle} onLongPress={() => handlePress(item)}><Text style={{backgroundColor: item.color, color:"black", fontSize: "25", fontWeight: "bold"}}> {item.name}</Text><MeasureButton/></Pressable>
+                <Pressable style={styles.pressableStyle} onLongPress={() => handlePress(item)}>
+                    <Text style={{backgroundColor: item.color,
+                                color:"black",
+                                fontSize: "25",
+                                fontWeight: "bold",
+                                borderColor: "black",
+                                borderWidth: 2,
+                                width: 150}}>
+                         {item.name}
+                    </Text><MeasureButton item={item}/></Pressable>
             
         )}
         

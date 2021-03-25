@@ -7,49 +7,79 @@ import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 import { useState } from 'react';
 
-export function MeasureButton () {
+export function MeasureButton ({item}) {
 
-    const [ measurement, setMeasurement ] = useState(" cups ");
-    const [ myNumber, setMyNumber ] = useState(0);
+    const [ measurement, setMeasurement ] = useState("c");
+    const [ myNumber, setMyNumber ] = useState(1);
+    const [ myDisplayNumber, setMyDisplayNumber ] = useState(0);
+
+
 
     /*const handleClick = (e) => {
         e.preventDefault()
         handleToggle(e.currentTarget.id)
     }*/
     function measurePress(measure) {
-        if (measure == " cups "){
-            setMeasurement("ounces");
+        if (measure == "c"){
+            setMeasurement("oz");
+            setMyDisplayNumber(myNumber * item.ounceUnit);
         }
-        if (measure == "ounces"){
-            setMeasurement("grams ");
+        if (measure == "oz"){
+            setMeasurement("g");
+            setMyDisplayNumber(myNumber * item.gramUnit);
         }
-        if (measure == "grams "){
-            setMeasurement(" cups ");
+        if (measure == "g"){
+            setMeasurement("c");
+            setMyDisplayNumber(myNumber * item.cupUnit);
         }
         
     }
     function increment(){
-        let tempNumber = myNumber;
-        tempNumber ++;
-        setMyNumber(tempNumber)
+        if(myNumber < 3){
+            let tempNumber = myNumber;
+            tempNumber ++;
+            setMyNumber(tempNumber);
+            if (measurement == "c"){
+                setMyDisplayNumber(tempNumber * item.cupUnit)
+            }
+            if (measurement == "oz"){
+                setMyDisplayNumber(tempNumber * item.ounceUnit)
+            }
+            if (measurement == "g"){
+                setMyDisplayNumber(tempNumber * item.gramUnit)
+            }
+        }
     }
     function decrement(){
-        let tempNumber = myNumber;
-        tempNumber --;
-        setMyNumber(tempNumber)
+        if(myNumber > 0){
+            let tempNumber = myNumber;
+            tempNumber --;
+            setMyNumber(tempNumber);
+            if (measurement == "c"){
+                setMyDisplayNumber(tempNumber * item.cupUnit)
+            }
+            if (measurement == "oz"){
+                setMyDisplayNumber(tempNumber * item.ounceUnit)
+            }
+            if (measurement == "g"){
+                setMyDisplayNumber(tempNumber * item.gramUnit)
+            }
+        }
     }
 
     return (
         <View style={styles.measureContainer}>
-        <Text style={styles.numberStyle}>{myNumber}</Text>
-        <Text style={styles.selectedComponent} onPress={() => measurePress(measurement)}>
-            {measurement}
-        </Text>
-        <View style={styles.incrementContainer}>
-            <Text onPress={increment} style={styles.incrementPart}>+</Text>
-            <Text style={styles.incrementPart}>|</Text>
-            <Text onPress={decrement} style={styles.incrementPart}>-</Text>
-        </View>
+            <Text style={styles.servingNumberStyle}>({myNumber})</Text>
+
+
+            <View style={styles.incrementContainer}>
+                <Text onPress={decrement} style={styles.incrementPart}>-</Text>
+                <Text onPress={increment} style={styles.incrementPart}>+</Text>
+                <Text style={styles.numberStyle}>{myDisplayNumber}</Text>
+            </View>
+            <Text style={styles.selectedComponent} onPress={() => measurePress(measurement)}>
+                {measurement}
+            </Text>
         
         </View>
     );
@@ -60,33 +90,42 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: "black",
         marginHorizontal: 5,
-
+        borderColor: "black",
+        borderRightWidth: 2
     },
     incrementContainer:{
         flexDirection: 'row',
         backgroundColor: "gray",
         borderColor: "black",
-        borderWidth: 2,
+        borderLeftWidth: 2,
         right: 0        
+    },
+    servingNumberStyle:{
+        fontSize: 20,
+        color: "black",
+        width: 30
     },
     numberStyle:{
         fontSize: 20,
         color: "black",
         marginHorizontal: 5,
         borderColor: "black",
-        borderWidth: 2
+        borderRightWidth: 2,
+        width: 40
     },
     measureContainer:{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: "gray"
+        backgroundColor: "gray",
+        borderWidth: 2,
+        borderColor: "black"
     },
     selectedComponent:{
         fontSize: 20,
         right: 0,
         color: "black",
         marginHorizontal: 5,
-        width: 65
+        width: 25
     },
     incrementStyle:{
         fontSize: 20,

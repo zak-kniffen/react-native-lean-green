@@ -9,11 +9,11 @@ import { useState } from 'react';
 
 export function MeasureButton ({item}) {
 
-    const [ measurement, setMeasurement ] = useState("c");
+    const [ measurement, setMeasurement ] = useState(item.defaultMeasurement);
     const [ myNumber, setMyNumber ] = useState(1);
     const [ myDisplayNumber, setMyDisplayNumber ] = useState(0);
 
-
+    
 
     /*const handleClick = (e) => {
         e.preventDefault()
@@ -28,9 +28,13 @@ export function MeasureButton ({item}) {
             setMeasurement("g");
             setMyDisplayNumber(myNumber * item.gramUnit);
         }
-        if (measure == "g"){
+        if (measure == "g" && item.leanGreen == "green"){
             setMeasurement("c");
             setMyDisplayNumber(myNumber * item.cupUnit);
+        }
+        if (measure == "g" && item.leanGreen == "lean"){
+            setMeasurement("oz");
+            setMyDisplayNumber(myNumber * item.ounceUnit);
         }
         
     }

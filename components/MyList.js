@@ -30,7 +30,7 @@ export default function MyList ({selected, handleFilter}) {
                                 borderColor: "black",
                                 borderWidth: 2,
                                 width: 150}}>
-                         {item.name}
+                         {item.shortName}
                     </Text><MeasureButton item={item}/></Pressable>
             
         )}

@@ -1,22 +1,25 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 import { useState, useEffect } from 'react';
 
-export function MeasureButton ({item, handleTotalSum, totalSum}) {
+export function MeasureButton ({item, handleTotalSum, totalSum, handleFilter}) {
 
     const [ measurement, setMeasurement ] = useState(item.defaultMeasurement);
     const [ myNumber, setMyNumber ] = useState(0);
     const [ myDisplayNumber, setMyDisplayNumber ] = useState(0);
 
-    useEffect(() => {
-        console.log("child updated");
-      });
 
+
+      const handlePress = (e) => {
+        console.log(e);
+        handleTotalSum(-(myNumber));
+        handleFilter(e);
+    }
     /*const handleClick = (e) => {
         e.preventDefault()
         handleToggle(e.currentTarget.id)
@@ -76,7 +79,17 @@ export function MeasureButton ({item, handleTotalSum, totalSum}) {
     }
 
     return (
-        <View style={styles.measureContainer}>
+                        <Pressable style={styles.pressableStyle} onLongPress={() => handlePress(item)}>
+                    <Text style={{backgroundColor: item.color,
+                                color:"black",
+                                fontSize: "25",
+                                fontWeight: "bold",
+                                borderColor: "black",
+                                borderWidth: 2,
+                                width: 150}}>
+                         {item.shortName}
+                    </Text>
+                    <View style={styles.measureContainer}>
             <Text style={styles.servingNumberStyle}>({myNumber})</Text>
 
 
@@ -90,10 +103,15 @@ export function MeasureButton ({item, handleTotalSum, totalSum}) {
             </Text>
         
         </View>
+        </Pressable>
     );
 };
 
 const styles = StyleSheet.create({
+    pressableStyle:{
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
     incrementPart:{
         fontSize: 20,
         color: "black",

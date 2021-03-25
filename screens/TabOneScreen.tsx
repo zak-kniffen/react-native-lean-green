@@ -88,7 +88,7 @@ const handleFilter = (e: any) => {
           <MyList selected={selected} handleFilter={handleFilter} handleTotalSum={handleTotalSumLeans} totalSum={totalSumLeans}></MyList>
         </View>
         <View style={styles.myLeanGreens}>
-          <Text style={styles.myHeading}>My Greens {totalSumGreens}</Text>
+          <Text style={styles.myHeading}>My Greens: {totalSumGreens}</Text>
           <MyList selected={myGreens} handleFilter={handleFilter} handleTotalSum={handleTotalSumGreens} totalSum={totalSumGreens}></MyList>
         </View>
       </View>

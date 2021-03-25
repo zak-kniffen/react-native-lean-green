@@ -15,26 +15,14 @@ export default function MyList ({selected, handleFilter, handleTotalSum, totalSu
 
 
 
-    const handlePress = (e) => {
-        console.log(e);
-        handleFilter(e);
-    }
+
     
     return (
         <FlatList style={styles.myList}
         data={selected}
         renderItem={({ item }) => (
             
-                <Pressable style={styles.pressableStyle} onLongPress={() => handlePress(item)}>
-                    <Text style={{backgroundColor: item.color,
-                                color:"black",
-                                fontSize: "25",
-                                fontWeight: "bold",
-                                borderColor: "black",
-                                borderWidth: 2,
-                                width: 150}}>
-                         {item.shortName}
-                    </Text><MeasureButton item={item} handleTotalSum={handleTotalSum} totalSum={totalSum}/></Pressable>
+<MeasureButton item={item} handleTotalSum={handleTotalSum} totalSum={totalSum}  handleFilter={handleFilter}/>
             
         )}
         

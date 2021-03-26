@@ -16,7 +16,7 @@ const handleChange = (e) => {
 
   return (
     <View>
-<ModalDropdown   onSelect={handleChange} options={options.map(options => options.name)}  style={styles.selectBox} dropdownStyle={styles.dropdown} textStyle={styles.selectBoxText} dropdownTextStyle={styles.dropdownText} />
+<ModalDropdown   onSelect={handleChange} options={options.map(options => (options.name + " " + options.cupUnit + " cup"))}  style={styles.selectBox} dropdownStyle={styles.dropdown} textStyle={styles.selectBoxText} dropdownTextStyle={styles.dropdownText} />
     
     </View>
   );

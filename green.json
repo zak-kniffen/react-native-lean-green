@@ -1,8 +1,8 @@
 [{"lean": [    
   {
-    "id": 1,
+    "id": 500,
     "name": "Hamburger, Cooked",
-    "color": "blue",
+    "color": "dodgerblue",
     "leanGreen": "lean",
     "ounceUnit": 5,
     "gramUnit": 142,
@@ -12,9 +12,9 @@
 
   },
   {
-    "id": 2,
+    "id": 501,
     "name": "   Turkey   ",
-    "color": "purple",
+    "color": "lightcyan",
     "leanGreen": "lean",
     "ounceUnit": 7,
     "gramUnit": 198,
@@ -23,9 +23,9 @@
     "shortName": "Turkey"
   },
   {
-    "id": 3,
+    "id": 502,
     "name": "---Chicken---",
-    "color": "cyan",
+    "color": "skyblue",
     "leanGreen": "lean",
     "ounceUnit": 6,
     "gramUnit": 170,
@@ -34,9 +34,9 @@
     "shortName": "Chicken"
   },
   {
-    "id": 4,
+    "id": 503,
     "name": "   Sausage   ",
-    "color": "blue",
+    "color": "MediumSlateBlue",
     "leanGreen": "lean",
     "ounceUnit": 5,
     "gramUnit": 142,
@@ -45,7 +45,7 @@
     "shortName": "Sausage"
   },
   {
-    "id": 5,
+    "id": 504,
     "name": " Roast Beef ",
     "color": "purple",
     "leanGreen": "lean",
@@ -59,59 +59,380 @@
 },
 {"green": [
   {
-    "id": 6,
-    "name": "Cucumbers",
-    "color": "green",
+    "id": 1,
+    "name": "Arugula (Raw)",
+    "color": "#00935f",
     "leanGreen": "green",
-    "ounceUnit": 0,
-    "gramUnit": 61,
+    "ounceUnit": 0.35,
+    "gramUnit": 10,
     "cupUnit": 0.5,
     "defaultMeasurement": "c",
-    "shortName": "Cucumbers"
+    "shortName": "Arugula"
+  },
+  {
+    "id": 2,
+    "name": "Asparagus (Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.36,
+    "gramUnit": 67,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Asparagus"
+  },
+  {
+    "id": 3,
+    "name": "Asparagus (Cooked from frozen)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 3.17,
+    "gramUnit": 90,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Asparagus"
+  },
+  {
+    "id": 4,
+    "name": "Asparagus (Cooked from fresh)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 3.17,
+    "gramUnit": 90,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Asparagus"
+  },
+  {
+    "id": 5,
+    "name": "Asparagus (Cooked from canned)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 4.27,
+    "gramUnit": 121,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Asparagus"
+  },
+  {
+    "id": 6,
+    "name": "Broccoli (Raw)",
+    "color": "#f8978e",
+    "leanGreen": "green",
+    "ounceUnit": 1.55,
+    "gramUnit": 44,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Broccoli"
   },
   {
     "id": 7,
-    "name": "Spinach",
-    "color": "green",
+    "name": "Broccoli (Cooked from frozen)",
+    "color": "#f8978e",
     "leanGreen": "green",
-    "ounceUnit": 0,
-    "gramUnit": 17,
-    "cupUnit": 1,
+    "ounceUnit": 3.24,
+    "gramUnit": 92,
+    "cupUnit": 0.5,
     "defaultMeasurement": "c",
-    "shortName": "Spinach"
+    "shortName": "Broccoli"
   },
   {
     "id": 8,
-    "name": "Tomatoes",
-    "color": "yellow",
+    "name": "Broccoli (Cooked from fresh)",
+    "color": "#f8978e",
     "leanGreen": "green",
-    "ounceUnit": 0,
-    "gramUnit": 35,
+    "ounceUnit": 2.75,
+    "gramUnit": 78,
     "cupUnit": 0.5,
     "defaultMeasurement": "c",
-    "shortName": "Tomatoes"
+    "shortName": "Broccoli"
   },
   {
     "id": 9,
-    "name": "Green Beans",
-    "color": "green",
+    "name": "Broccoli(Chinese-cooked from fresh)",
+    "color": "#f8978e",
     "leanGreen": "green",
-    "ounceUnit": 0,
-    "gramUnit": 42,
+    "ounceUnit": 1.55,
+    "gramUnit": 44,
     "cupUnit": 0.5,
     "defaultMeasurement": "c",
-    "shortName": "Green Beans"
+    "shortName": "Broccoli"
   },
   {
     "id": 10,
-    "name": "Spaghetti Squash",
-    "color": "red",
+    "name": "Broccoli Raab(Raw)",
+    "color": "#f8978e",
     "leanGreen": "green",
-    "ounceUnit": 0,
+    "ounceUnit": 0.71,
+    "gramUnit": 20,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Broccoli Raab"
+  },
+  {
+    "id": 11,
+    "name": "Broccoli Raab(Cooked from fresh)",
+    "color": "#f8978e",
+    "leanGreen": "green",
+    "ounceUnit": 1.55,
+    "gramUnit": 44,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Broccoli Raab"
+  },
+  {
+    "id": 12,
+    "name": "Broccoli Raab(Cooked from fresh)",
+    "color": "#f8978e",
+    "leanGreen": "green",
+    "ounceUnit": 1.55,
+    "gramUnit": 44,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Broccoli Raab"
+  },
+  {
+    "id": 13,
+    "name": "Cabbage (Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.57,
+    "gramUnit": 45,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Cabbage"
+  },
+  {
+    "id": 14,
+    "name": "Cabbage,Bok-Choy(Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.23,
+    "gramUnit": 35,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Bok-Choy"
+  },
+  {
+    "id": 15,
+    "name": "Cabbage,Bok-Choy(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 3,
+    "gramUnit": 85,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Bok-Choy"
+  },
+  {
+    "id": 16,
+    "name": "Cabbage,Pe-Tsai(Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.34,
+    "gramUnit": 38,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Pe-Tsai"
+  },
+  {
+    "id": 17,
+    "name": "Cabbage,Pe-Tsai(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.1,
+    "gramUnit": 60,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Pe-Tsai"
+  },
+  {
+    "id": 18,
+    "name": "Cabbage,Pe-Tsai(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.1,
+    "gramUnit": 60,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Pe-Tsai"
+  },
+  {
+    "id": 18,
+    "name": "Cabbage,Common(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.65,
+    "gramUnit": 75,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Cabbage"
+  },
+  {
+    "id": 19,
+    "name": "Cabbage,Napa(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.92,
+    "gramUnit": 55,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Napa Cabbage"
+  },
+  {
+    "id": 20,
+    "name": "Cabbage,Red(Raw)",
+    "color": "#f8978e",
+    "leanGreen": "green",
+    "ounceUnit": 1.23,
+    "gramUnit": 35,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Red Cabbage"
+  },
+  {
+    "id": 21,
+    "name": "Cabbage,Red(Cooked)",
+    "color": "#f8978e",
+    "leanGreen": "green",
+    "ounceUnit": 2.65,
+    "gramUnit": 75,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Red Cabbage"
+  },
+  {
+    "id": 22,
+    "name": "Cabbage,Savoy(Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.23,
+    "gramUnit": 35,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Savoy Cabbage"
+  },
+  {
+    "id": 23,
+    "name": "Cabbage,Savoy(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.56,
+    "gramUnit": 73,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Savoy Cabbage"
+  },
+  {
+    "id": 24,
+    "name": "Cabbage,Swamp(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.73,
+    "gramUnit": 49,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Swamp Cabbage"
+  },
+  {
+    "id": 25,
+    "name": "Cabbage,Swamp(Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 0.99,
+    "gramUnit": 28,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Swamp Cabbage"
+  },
+  {
+    "id": 26,
+    "name": "Cauliflower(Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.76,
     "gramUnit": 50,
     "cupUnit": 0.5,
     "defaultMeasurement": "c",
-    "shortName": "Spaghetti Squash"
+    "shortName": "Cauliflower"
+  },
+  {
+    "id": 27,
+    "name": "Cauliflower(Cooked from frozen)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 3.17,
+    "gramUnit": 90,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Cauliflower"
+  },
+  {
+    "id": 28,
+    "name": "Cauliflower(Cooked from fresh)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.19,
+    "gramUnit": 62,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Cauliflower"
+  },
+  {
+    "id": 29,
+    "name": "Cauliflower,Green(Raw)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 1.13,
+    "gramUnit": 32,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Green Cauliflower"
+  },
+  {
+    "id": 30,
+    "name": "Cauliflower,Green(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.19,
+    "gramUnit": 62,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Green Cauliflower"
+  },
+  {
+    "id": 31,
+    "name": "Celery(Raw)",
+    "color": "#00935f",
+    "leanGreen": "green",
+    "ounceUnit": 178,
+    "gramUnit": 51,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Celery"
+  },
+  {
+    "id": 32,
+    "name": "Celery(Cooked)",
+    "color": "#00935f",
+    "leanGreen": "green",
+    "ounceUnit": 2.65,
+    "gramUnit": 75,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Celery"
+  },
+  {
+    "id": 33,
+    "name": "Chard, Swiss(Raw)",
+    "color": "#00935f",
+    "leanGreen": "green",
+    "ounceUnit": 0.63,
+    "gramUnit": 18,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Swiss Chard"
   }
+
+  
 ]}]
   

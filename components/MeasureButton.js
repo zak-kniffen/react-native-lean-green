@@ -8,6 +8,7 @@ import { Text, View } from './Themed';
 import { useState, useEffect } from 'react';
 
 export function MeasureButton ({item, handleTotalSum, totalSum, handleFilter}) {
+    
 
     const [ measurement, setMeasurement ] = useState(item.defaultMeasurement);
     const [ myNumber, setMyNumber ] = useState(0);

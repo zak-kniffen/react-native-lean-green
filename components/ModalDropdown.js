@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     fontSize: 40
   },
   selectBox:{
-    backgroundColor: "red",
+    backgroundColor: "#00935f",
     alignSelf: "center",
 
     

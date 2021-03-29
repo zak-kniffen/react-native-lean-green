@@ -2,19 +2,12 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import leanData from "../green.json";
 import greenData from "../lean.json";
-import { FlatList, RefreshControl } from "react-native";
-
-
-
-
-import EditScreenInfo from '../components/EditScreenInfo';
+import { FlatList } from "react-native";
 import ModalDropdown from '../components/ModalDropdown';
 import MyList from '../components/MyList';
-import SelectedComponent from '../components/SelectedComponent';
 import { Text, View } from '../components/Themed';
-
 import { useState } from 'react';
-import { loadOptions } from '@babel/core';
+
 
 const flatList = FlatList;
 export default function TabOneScreen() {

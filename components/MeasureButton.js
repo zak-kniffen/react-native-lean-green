@@ -1,11 +1,7 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
+import { StyleSheet, Pressable } from 'react-native';
 import { Text, View } from './Themed';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export function MeasureButton ({item, handleTotalSum, totalSum, handleFilter}) {
     

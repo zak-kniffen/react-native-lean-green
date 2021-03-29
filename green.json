@@ -729,6 +729,17 @@
     "cupUnit": 0.5,
     "defaultMeasurement": "c",
     "shortName": "Kale"
+  },
+  {
+    "id": 61,
+    "name": "Kale(Cooked)",
+    "color": "#fff0d2",
+    "leanGreen": "green",
+    "ounceUnit": 2.29,
+    "gramUnit": 65,
+    "cupUnit": 0.5,
+    "defaultMeasurement": "c",
+    "shortName": "Kale"
   }
 
   

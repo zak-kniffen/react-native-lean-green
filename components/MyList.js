@@ -1,14 +1,8 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { Button,StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
-import { Text, View } from './Themed';
+import {StyleSheet} from 'react-native';
 import {FlatList } from 'react-native';
-import {SelectedComponent} from './SelectedComponent';
 import {MeasureButton} from './MeasureButton';
-import { useEffect} from 'react';
+
 
 
 export default function MyList ({selected, handleFilter, handleTotalSum, totalSum}) {
